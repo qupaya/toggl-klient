@@ -1,6 +1,6 @@
-package de.atennert.toggl
+package com.qupaya.toggl
 
-import de.atennert.toggl.api.TogglApi
+import com.qupaya.toggl.api.TogglApi
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.todayIn
@@ -28,25 +28,30 @@ class Toggl(config: Configuration) {
   fun stop() {
     currentEntry?.run {
       togglApi.stopTimeEntry(this)
-      updateDoneTime()
     }
+    val runningSeconds = getCurrentRuntimeSeconds()
     currentEntry = null
+    updateDoneTime(runningSeconds)
   }
 
   fun switch() {
     currentEntry?.run {
       togglApi.stopTimeEntry(this)
-      updateDoneTime()
     }
+    val runningSeconds = getCurrentRuntimeSeconds()
     currentEntry = togglApi.startATimeEntry(workspace, Clock.System.now())
+    updateDoneTime(runningSeconds)
   }
 
-  private fun updateDoneTime() {
-    currentEntry?.run {
+  private fun getCurrentRuntimeSeconds(): Long {
+    return currentEntry?.let {
       val end = Clock.System.now()
-      val runningSeconds = (end.epochSeconds - this.start.epochSeconds)
-      doneSecondsToday += runningSeconds
-    }
+      end.epochSeconds - it.start.epochSeconds
+    } ?: 0
+  }
+
+  private fun updateDoneTime(runningSeconds: Long) {
+    doneSecondsToday += runningSeconds
   }
 
   fun getTimeToDo(): Double {

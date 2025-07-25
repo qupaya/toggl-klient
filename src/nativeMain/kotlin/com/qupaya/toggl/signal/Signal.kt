@@ -1,4 +1,4 @@
-package de.atennert.toggl.signal
+package com.qupaya.toggl.signal
 
 import platform.posix.SIGABRT
 import platform.posix.SIGBUS

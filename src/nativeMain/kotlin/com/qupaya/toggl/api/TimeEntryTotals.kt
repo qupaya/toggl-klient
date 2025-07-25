@@ -1,4 +1,4 @@
-package de.atennert.toggl.api
+package com.qupaya.toggl.api
 
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.Serializable

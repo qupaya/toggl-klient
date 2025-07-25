@@ -1,4 +1,4 @@
-package de.atennert.toggl.ui
+package com.qupaya.toggl.ui
 
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.cValuesOf

@@ -1,4 +1,4 @@
-package de.atennert.toggl.signal
+package com.qupaya.toggl.signal
 
 import kotlinx.cinterop.CFunction
 import kotlinx.cinterop.CPointer

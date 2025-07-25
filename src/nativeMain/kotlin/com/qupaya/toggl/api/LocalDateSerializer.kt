@@ -1,4 +1,4 @@
-package de.atennert.toggl.api
+package com.qupaya.toggl.api
 
 import kotlinx.datetime.LocalDate
 import kotlinx.serialization.KSerializer

@@ -1,6 +1,6 @@
-package de.atennert.toggl.api
+package com.qupaya.toggl.api
 
-import de.atennert.toggl.APP_NAME
+import com.qupaya.toggl.APP_NAME
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.engine.curl.*

@@ -1,10 +1,10 @@
-import de.atennert.toggl.Configuration
-import de.atennert.toggl.Toggl
-import de.atennert.toggl.signal.SignalHandler
-import de.atennert.toggl.ui.GtkApplication
-import de.atennert.toggl.ui.Indicator
-import de.atennert.toggl.ui.Menu
-import de.atennert.toggl.ui.Notification
+import com.qupaya.toggl.Configuration
+import com.qupaya.toggl.Toggl
+import com.qupaya.toggl.signal.SignalHandler
+import com.qupaya.toggl.ui.GtkApplication
+import com.qupaya.toggl.ui.Indicator
+import com.qupaya.toggl.ui.Menu
+import com.qupaya.toggl.ui.Notification
 import kotlinx.cinterop.CPointer
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.reinterpret

@@ -3,7 +3,7 @@ plugins {
   alias(libs.plugins.kotlinSerialization)
 }
 
-group = "de.atennert"
+group = "com.qupaya.toggl"
 version = "1.0-SNAPSHOT"
 
 kotlin {

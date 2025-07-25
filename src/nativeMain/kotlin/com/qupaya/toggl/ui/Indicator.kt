@@ -1,7 +1,7 @@
-package de.atennert.toggl.ui
+package com.qupaya.toggl.ui
 
-import de.atennert.toggl.APP_NAME
-import de.atennert.toggl.userHome
+import com.qupaya.toggl.APP_NAME
+import com.qupaya.toggl.userHome
 import kotlinx.cinterop.CValuesRef
 import kotlinx.cinterop.ExperimentalForeignApi
 import togglKlient.AppIndicatorCategory
